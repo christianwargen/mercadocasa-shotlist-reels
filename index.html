@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shot-list · Reels Casa Cerrada · Locación Platea</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --verde:#2A8B4E; --verde-d:#1f6b3c; --crema:#F5F1E8; --carbon:#2B2B2B;
+    --terra:#C8643C; --gris:#6b6b6b; --linea:#e7e3d8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Manrope',sans-serif;background:var(--crema);color:var(--carbon);line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:780px;margin:0 auto;padding:0 16px 80px}
+
+  header{background:var(--verde);color:#fff;padding:30px 16px 26px;text-align:center}
+  header .kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+  header h1{font-size:26px;font-weight:800;margin:8px 0 6px;line-height:1.15}
+  header p{font-size:14px;opacity:.92;max-width:520px;margin:0 auto}
+
+  .section-title{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--verde-d);margin:34px 0 12px;display:flex;align-items:center;gap:8px}
+  .section-title::before{content:"";width:22px;height:3px;background:var(--terra);border-radius:2px}
+
+  .box{background:#fff;border:1px solid var(--linea);border-radius:14px;padding:18px;margin-bottom:14px}
+  .box h3{font-size:16px;font-weight:800;margin-bottom:8px}
+  .box ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .box li{font-size:14.5px;padding-left:24px;position:relative}
+  .box li::before{content:"✓";position:absolute;left:0;top:0;color:var(--verde);font-weight:800}
+  .box li.warn::before{content:"!";color:var(--terra)}
+  .box li b{font-weight:700}
+
+  /* video card */
+  .card{background:#fff;border:1px solid var(--linea);border-radius:16px;overflow:hidden;margin-bottom:18px;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+  .card-head{padding:16px 18px;border-bottom:1px solid var(--linea);background:linear-gradient(180deg,#fff, #fcfbf7)}
+  .card-head .vnum{display:inline-block;background:var(--verde);color:#fff;font-size:12px;font-weight:800;letter-spacing:.06em;padding:3px 10px;border-radius:999px;text-transform:uppercase}
+  .card-head .vnum.new{background:var(--terra)}
+  .card-head h2{font-size:19px;font-weight:800;margin:9px 0 2px}
+  .card-head .angle{font-size:13px;color:var(--gris);font-weight:600}
+  .hook{margin:12px 18px 4px;background:var(--crema);border-left:4px solid var(--terra);border-radius:8px;padding:12px 14px}
+  .hook .lab{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--terra)}
+  .hook .txt{font-size:16px;font-weight:700;margin-top:3px}
+
+  table{width:100%;border-collapse:collapse;margin:6px 0 4px}
+  td{padding:11px 18px;font-size:14px;vertical-align:top;border-top:1px solid var(--linea)}
+  .beat{font-weight:800;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--carbon);white-space:nowrap;width:1%}
+  .voz{color:#333}
+  .placa{display:inline-block;margin-top:7px;background:#eef5ef;color:var(--verde-d);font-size:11.5px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;padding:4px 9px;border-radius:6px}
+  .tag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:6px;white-space:nowrap}
+  .tag.platea{background:#e7f0ea;color:var(--verde-d)}
+  .tag.broll{background:#f6e7df;color:var(--terra)}
+  td.where{width:1%;white-space:nowrap}
+
+  .note{font-size:12.5px;color:var(--gris);padding:10px 18px 16px;font-style:italic}
+  footer{text-align:center;color:var(--gris);font-size:12px;margin-top:36px}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin:10px 0 0}
+  .legend span{font-size:12px;display:flex;align-items:center;gap:6px}
+  @media (max-width:560px){
+    td{padding:10px 12px}
+    .beat{font-size:11px}
+    header h1{font-size:22px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kicker">Mercado Casa · Producción</div>
+  <h1>Shot-list · Reels Casa Cerrada</h1>
+  <p>Locación: la platea del showroom. 5 reels para filmar en una sola jornada con Iván a cámara, más el B-roll a tener listo.</p>
+</header>
+
+<div class="wrap">
+
+  <div class="section-title">Cómo filmamos</div>
+  <div class="box">
+    <ul>
+      <li><b>Todo en una jornada</b> en la platea: Iván graba los 5 talking-heads de corrido.</li>
+      <li><b>Vertical 9:16, 4K</b>, luz de día. Iván a cámara, tono cercano y directo.</li>
+      <li>La platea es el <b>"antes" real</b> — la usamos como punto de arranque, no como producto terminado.</li>
+      <li>El <b>reveal de la casa cerrada</b> entra como B-roll (render o foto/video real de obra InBuild cerrada).</li>
+      <li>Audio con corbatero si hay viento (obra abierta). El 80% mira sin sonido → mandan las placas.</li>
+    </ul>
+  </div>
+
+  <div class="section-title">B-roll a tener listo (sin esto faltan planos)</div>
+  <div class="box">
+    <ul>
+      <li><b>Render o foto/video de la casa cerrada</b> (techo, puertas y ventanas) — para el reveal de V1, V2, V3 y V5.</li>
+      <li class="warn"><b>Toma de pared con los caños a la vista (luz, agua y gas)</b> — CRÍTICA para el V4. En la platea no existe; hay que conseguirla de una obra InBuild real.</li>
+      <li>Opcional: drone corto de la platea / terreno para abrir y cerrar.</li>
+    </ul>
+  </div>
+
+  <div class="legend">
+    <span><span class="tag platea">Platea</span> Iván a cámara en la locación</span>
+    <span><span class="tag broll">B-roll</span> render / foto / video aparte</span>
+  </div>
+
+  <!-- V1 -->
+  <div class="section-title">Los 5 reels</div>
+
+  <div class="card">
+    <div class="card-head">
+      <span class="vnum">Video 1</span>
+      <h2>Terreno parado</h2>
+      <div class="angle">Dolor · dejás de esperar y arrancás</div>
+    </div>
+    <div class="hook"><div class="lab">Hook</div><div class="txt">¿Cuántos años hace que tenés ese terreno juntando pasto?</div></div>
+    <table>
+      <tr><td class="beat">Hook</td><td class="voz">¿Cuántos años hace que tenés ese terreno juntando pasto?<br><span class="placa">¿Ya tenés terreno?</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+      <tr><td class="beat">Dolor</td><td class="voz">Si hace más de un año, probablemente estés esperando lo mismo que espera la mayoría.<br><span class="placa">¿Cuánto hace que lo mirás vacío?</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+      <tr><td class="beat">Problema</td><td class="voz">El momento perfecto para arrancar. Y mientras tanto, seguís alquilando.<br><span class="placa">El momento perfecto no llega</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+      <tr><td class="beat">Solución</td><td class="voz">Por eso armamos la casa VIVE 38. Te la entregamos cerrada —con techo, puertas y ventanas puestas— lista para que la termines por dentro, a tu ritmo.<br><span class="placa">Tu casa cerrada, lista para terminar</span></td><td class="where"><span class="tag broll">B-roll</span></td></tr>
+      <tr><td class="beat">Plazo</td><td class="voz">Y te la entregamos en menos de 3 meses desde que firmás. Por contrato.<br><span class="placa">Entrega en menos de 3 meses desde la firma</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+      <tr><td class="beat">Oferta</td><td class="voz">Empezás con un anticipo desde $10.400.000.<br><span class="placa">Anticipo desde $10.400.000</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+      <tr><td class="beat">Financiación</td><td class="voz">Y el saldo en hasta 60 cuotas de $574.200. En pesos.<br><span class="placa">60 cuotas de $574.200</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+      <tr><td class="beat">CTA</td><td class="voz">Si ya tenés el terreno, escribinos VIVE y coordinamos una reunión.<br><span class="placa">Escribí "VIVE"</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+    </table>
+    <div class="note">Tip: el hook se graba parado sobre la platea, señalando el terreno alrededor.</div>
+  </div>
+
+  <!-- V2 -->
+  <div class="card">
+    <div class="card-head">
+      <span class="vnum">Video 2</span>
+      <h2>Toda la plata</h2>
+      <div class="angle">Rompe la objeción de financiación</div>
+    </div>
+    <div class="hook"><div class="lab">Hook</div><div class="txt">Si ya tenés el terreno, no necesitás tener toda la plata para empezar tu casa.</div></div>
+    <table>
+      <tr><td class="beat">Hook</td><td class="voz">Si ya tenés el terreno, no necesitás tener toda la plata para empezar tu casa.<br><span class="placa">No necesitás toda la plata</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+      <tr><td class="beat">Creencia</td><td class="voz">La mayoría cree que sí. Y por eso nunca empieza a construir.<br><span class="placa">Y por eso nunca empieza</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+      <tr><td class="beat">Solución</td><td class="voz">Con VIVE 38 arrancás ya. Te la entregamos cerrada —con puertas y ventanas puestas— lista para que la termines por dentro a tu ritmo. Y en menos de 3 meses desde que firmás.<br><span class="placa">Casa cerrada, lista para terminar</span></td><td class="where"><span class="tag broll">B-roll</span></td></tr>
+      <tr><td class="beat">Oferta</td><td class="voz">Empezás con un anticipo desde $10.400.000.<br><span class="placa">Anticipo desde $10.400.000</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+      <tr><td class="beat">Financiación</td><td class="voz">Y el saldo en hasta 60 cuotas de $574.200.<br><span class="placa">60 cuotas de $574.200</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+      <tr><td class="beat">CTA</td><td class="voz">Escribinos VIVE y te mostramos todos los detalles.<br><span class="placa">Escribí "VIVE"</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+    </table>
+  </div>
+
+  <!-- V3 -->
+  <div class="card">
+    <div class="card-head">
+      <span class="vnum">Video 3</span>
+      <h2>Al hueso</h2>
+      <div class="angle">Oferta directa · plazo + anticipo</div>
+    </div>
+    <div class="hook"><div class="lab">Hook</div><div class="txt">¿Sabías que podés construir tu casa en menos de 3 meses, arrancando solo con un anticipo de $10.400.000?</div></div>
+    <table>
+      <tr><td class="beat">Hook</td><td class="voz">¿Sabías que podés construir tu casa en menos de 3 meses, arrancando solo con un anticipo de $10.400.000?<br><span class="placa">Tu casa propia en menos de 3 meses</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+      <tr><td class="beat">Califica</td><td class="voz">Si ya tenés el terreno, esto es para vos.<br><span class="placa">¿Ya tenés el terreno?</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+      <tr><td class="beat">Producto</td><td class="voz">Te entregamos VIVE 38 cerrada —con techo, puertas y ventanas puestas— lista para que la termines por dentro a tu gusto.<br><span class="placa">Casa cerrada, lista para terminar</span></td><td class="where"><span class="tag broll">B-roll</span></td></tr>
+      <tr><td class="beat">Números</td><td class="voz">Arrancás con un anticipo desde $10.400.000 y el resto en hasta 60 cuotas de $574.200. En pesos.<br><span class="placa">Anticipo $10.400.000 · 60 cuotas $574.200</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+      <tr><td class="beat">Plazo</td><td class="voz">Y te mudás en menos de 3 meses desde que firmás.<br><span class="placa">Te mudás en menos de 3 meses desde la firma</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+      <tr><td class="beat">CTA</td><td class="voz">Coordiná una reunión y arrancá.<br><span class="placa">Agendá tu reunión</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+    </table>
+  </div>
+
+  <!-- V4 -->
+  <div class="card">
+    <div class="card-head">
+      <span class="vnum">Video 4</span>
+      <h2>Instalaciones listas</h2>
+      <div class="angle">El beneficio oculto · caños ya pasados</div>
+    </div>
+    <div class="hook"><div class="lab">Hook</div><div class="txt">¿Sabías que tu nueva casa ya viene con la instalación de luz, agua y gas pasada por dentro?</div></div>
+    <table>
+      <tr><td class="beat">Hook</td><td class="voz">¿Sabías que tu nueva casa ya viene con la instalación de luz, agua y gas pasada por dentro?<br><span class="placa">Luz, agua y gas ya instalados</span></td><td class="where"><span class="tag broll">B-roll</span></td></tr>
+      <tr><td class="beat">Producto</td><td class="voz">Te la entregamos con techo, puertas y ventanas puestas — lista para que la termines por dentro a tu gusto y conectes los servicios.<br><span class="placa">Casa cerrada + instalaciones listas</span></td><td class="where"><span class="tag broll">B-roll</span></td></tr>
+      <tr><td class="beat">Plazo</td><td class="voz">Y te la entregamos en menos de 3 meses desde que firmás.<br><span class="placa">En menos de 3 meses desde la firma</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+      <tr><td class="beat">Contacto</td><td class="voz">Si ya tenés el terreno, escribinos VIVE y te mandamos toda la info.<br><span class="placa">Escribí "VIVE"</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+    </table>
+    <div class="note">Ojo: el hook y el producto del V4 muestran instalaciones — necesitan la toma de pared con caños (luz/agua/gas) de una obra real. En la platea no existen. Iván sí graba acá el plazo y el cierre.</div>
+  </div>
+
+  <!-- V5 -->
+  <div class="card">
+    <div class="card-head">
+      <span class="vnum new">Video 5 · Nuevo</span>
+      <h2>La platea</h2>
+      <div class="angle">Vos la platea, nosotros la casa · 100% filmable en la locación</div>
+    </div>
+    <div class="hook"><div class="lab">Hook</div><div class="txt">¿Ves esta platea? Es lo único que ponés vos. La casa la ponemos nosotros.</div></div>
+    <table>
+      <tr><td class="beat">Hook</td><td class="voz">¿Ves esta platea? Es lo único que ponés vos. La casa la ponemos nosotros.<br><span class="placa">Vos la platea · nosotros la casa</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+      <tr><td class="beat">Cómo funciona</td><td class="voz">Sobre esta base te montamos la casa cerrada: paredes, techo, puertas y ventanas. Lista para que la termines por dentro.<br><span class="placa">Nosotros montamos la casa cerrada</span></td><td class="where"><span class="tag platea">Platea</span> <span class="tag broll">+ B-roll</span></td></tr>
+      <tr><td class="beat">Y si no la tenés</td><td class="voz">¿Y si todavía no tenés la platea hecha? No hay drama, también te la hacemos nosotros.<br><span class="placa">¿No la tenés? Te la hacemos</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+      <tr><td class="beat">Plazo</td><td class="voz">Y en menos de 3 meses desde que firmás, ya tenés tu casa cerrada, lista para terminar.<br><span class="placa">En menos de 3 meses desde la firma</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+      <tr><td class="beat">CTA</td><td class="voz">Si ya tenés el terreno, escribinos VIVE y arrancamos.<br><span class="placa">Escribí "VIVE"</span></td><td class="where"><span class="tag platea">Platea</span></td></tr>
+    </table>
+    <div class="note">El más fuerte para esta locación: Iván parado sobre la platea, la señala en el hook y en el beat de "cómo funciona". Casi todo se graba ahí; solo el reveal de la casa cerrada entra como cutaway.</div>
+  </div>
+
+  <div class="section-title">Pendiente de confirmar</div>
+  <div class="box">
+    <ul>
+      <li><b>Plano de pared con caños</b> para el V4 (de una obra InBuild real).</li>
+      <li><b>V5 · la platea como opción:</b> chequear con Iván cómo se comunica que la platea la pone el cliente o la hacemos nosotros (es opción con costo en la tabla), para que el reel coincida con lo que ofrece el asesor.</li>
+    </ul>
+  </div>
+
+  <footer>
+    Mercado Casa · Shot-list de producción · uso interno
+  </footer>
+
+</div>
+</body>
+</html>
