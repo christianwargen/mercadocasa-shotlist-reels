@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carruseles · Mercado Casa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--verde:#2A8B4E;--verde-d:#1f6b3c;--crema:#F5F1E8;--carbon:#2B2B2B;--terra:#C8643C;--gris:#6b6b6b;--linea:#e7e3d8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Manrope',sans-serif;background:var(--crema);color:var(--carbon);line-height:1.5}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 16px 80px}
+  header{background:var(--verde);color:#fff;padding:30px 16px 26px;text-align:center}
+  header .kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+  header h1{font-size:26px;font-weight:800;margin:8px 0 6px}
+  header p{font-size:14px;opacity:.92;max-width:560px;margin:0 auto}
+  .cw{margin-top:30px;background:#fff;border:1px solid var(--linea);border-radius:16px;overflow:hidden}
+  .ch{padding:16px 18px;border-bottom:1px solid var(--linea);display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:linear-gradient(180deg,#fff,#fcfbf7)}
+  .ch h2{font-size:18px;font-weight:800}
+  .ch .meta{font-size:12.5px;color:var(--gris);font-weight:600}
+  .pill{font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border-radius:999px}
+  .pill.pub{background:#e7f0ea;color:var(--verde-d)}
+  .pill.pend{background:#f6e7df;color:var(--terra)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;padding:16px 18px}
+  .sl{position:relative;border:1px solid var(--linea);border-radius:10px;overflow:hidden;background:#eee;aspect-ratio:4/5}
+  .sl img{width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in}
+  .sl .n{position:absolute;top:6px;left:6px;background:rgba(0,0,0,.55);color:#fff;font-size:11px;font-weight:700;padding:2px 7px;border-radius:6px}
+  .note{font-size:12.5px;color:var(--gris);padding:0 18px 16px;font-style:italic}
+  /* lightbox */
+  #lb{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out}
+  #lb img{max-width:94vw;max-height:94vh;border-radius:8px}
+  footer{text-align:center;color:var(--gris);font-size:12px;margin-top:36px}
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">Mercado Casa · Revisión</div>
+  <h1>Carruseles — los 4 ya hechos</h1>
+  <p>Tocá cualquier slide para verla grande. Orden de publicación: ancla (9/6) · filtro (17/6) · proceso (24/6) · sistema (1/7).</p>
+</header>
+<div class="wrap" id="app"></div>
+<div id="lb"><img src="" alt=""></div>
+
+<script>
+const BASE = "https://res.cloudinary.com/daosy4mbh/image/upload/";
+const CARRUSELES = [
+  {key:"ancla", titulo:"1 · Qué es Mercado Casa (ancla)", fecha:"9/6 · fijado en el perfil", estado:"publicado", v:["v1780949208/mc-carruseles/ancla-01.jpg","v1780949209/mc-carruseles/ancla-02.jpg","v1780949211/mc-carruseles/ancla-03.jpg","v1780949213/mc-carruseles/ancla-04.jpg","v1780949215/mc-carruseles/ancla-05.jpg","v1780949217/mc-carruseles/ancla-06.jpg","v1780949218/mc-carruseles/ancla-07.jpg","v1780949220/mc-carruseles/ancla-08.jpg","v1780949222/mc-carruseles/ancla-09.jpg"]},
+  {key:"filtro", titulo:"2 · Qué necesito para empezar (filtro)", fecha:"17/6", estado:"publicado", nota:"La portada (slide 01) es la que Seba marcó como agresiva — pendiente de suavizar.", v:["v1780949223/mc-carruseles/filtro-01.jpg","v1780949225/mc-carruseles/filtro-02.jpg","v1780949227/mc-carruseles/filtro-03.jpg","v1780949229/mc-carruseles/filtro-04.jpg","v1780949231/mc-carruseles/filtro-05.jpg","v1780949233/mc-carruseles/filtro-06.jpg"]},
+  {key:"proceso", titulo:"3 · Cómo se compra (proceso)", fecha:"24/6", estado:"pendiente", v:["v1780949234/mc-carruseles/proceso-01.jpg","v1780949236/mc-carruseles/proceso-02.jpg","v1780949238/mc-carruseles/proceso-03.jpg","v1780949239/mc-carruseles/proceso-04.jpg","v1780949241/mc-carruseles/proceso-05.jpg","v1780949243/mc-carruseles/proceso-06.jpg","v1780949245/mc-carruseles/proceso-07.jpg"]},
+  {key:"sistema", titulo:"4 · Sistema InBuild (sistema)", fecha:"1/7", estado:"pendiente", v:["v1780949247/mc-carruseles/sistema-01.jpg","v1780949248/mc-carruseles/sistema-02.jpg","v1780949250/mc-carruseles/sistema-03.jpg","v1780949252/mc-carruseles/sistema-04.jpg","v1780949253/mc-carruseles/sistema-05.jpg","v1780949255/mc-carruseles/sistema-06.jpg"]}
+];
+const app = document.getElementById("app");
+CARRUSELES.forEach(c=>{
+  const slides = c.v.map((u,i)=>`<div class="sl"><span class="n">${String(i+1).padStart(2,"0")}</span><img loading="lazy" src="${BASE+u}" alt="${c.key} ${i+1}"></div>`).join("");
+  const pill = c.estado==="publicado" ? `<span class="pill pub">Publicado</span>` : `<span class="pill pend">Pendiente</span>`;
+  app.insertAdjacentHTML("beforeend", `<div class="cw"><div class="ch"><h2>${c.titulo}</h2><span class="meta">${c.fecha} · ${c.v.length} slides</span>${pill}</div><div class="grid">${slides}</div>${c.nota?`<div class="note">⚠ ${c.nota}</div>`:""}</div>`);
+});
+const lb=document.getElementById("lb"), lbimg=lb.querySelector("img");
+document.addEventListener("click",e=>{
+  if(e.target.tagName==="IMG" && e.target.closest(".sl")){lbimg.src=e.target.src;lb.style.display="flex";}
+  else if(e.target===lb||e.target===lbimg){lb.style.display="none";}
+});
+</script>
+<footer>Mercado Casa · Revisión interna de carruseles</footer>
+</body>
+</html>
